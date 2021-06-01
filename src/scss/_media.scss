@@ -1,0 +1,368 @@
+/* Portrait tablets and medium desktops */
+@media (max-width: 1199px) {
+	.location {
+		&__place {
+			font-size: 36px;
+		}
+	}
+	.date,
+	.time {
+		font-size: 20px;
+	}
+	.weather {
+		&__temperature {
+			font-size: 150px;
+			&::after {
+				top: -67px;
+				font-size: 55px;
+			}
+		}
+
+		&__forecast {
+			& .weather {
+				&__icon {
+					font-size: 36px;
+				}
+				&__temperature {
+					font-size: 36px;
+					&::after {
+						top: -4px;
+						font-size: 32px;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* Portrait tablets and small desktops */
+@media (max-width: 1025px) {
+	.location {
+		&__map {
+			width: 300px;
+			height: 300px;
+			clip-path: path(
+				"M30 270, Q0 270 0 240, L0 30, Q0 0 30 0,L270 0, Q300 0 300 30, L300 240, Q300 270 270 270 L165 270, L150 300, L135 270 Z"
+			);
+		}
+	}
+	.left-aside {
+		&__date-time {
+			margin: 0px 0px 50px 0px;
+		}
+	}
+}
+
+/* Portrait tablets and small desktops */
+@media (max-width: 899px) {
+	.location {
+		margin: 0px 0px 10px 0px;
+		&__place {
+			font-size: 30px;
+		}
+	}
+	.date,
+	.time {
+		font-size: 16px;
+	}
+	.weather {
+		&__temperature {
+			font-size: 100px;
+			&::after {
+				top: -31px;
+			}
+		}
+
+		&__now {
+			& .weather {
+				&__parameters-container {
+					font-size: 12px;
+					& > * {
+						line-height: 20px;
+					}
+				}
+				&__wind-direction {
+					top: 1px;
+					font-size: 18px;
+				}
+				&__icon {
+					font-size: 60px;
+				}
+			}
+		}
+		&__forecast {
+			& .weather {
+				&__icon {
+					font-size: 24px;
+					top: -5px;
+				}
+				&__temperature {
+					font-size: 24px;
+					&::after {
+						top: -1px;
+						font-size: 24px;
+					}
+				}
+				&__all-day-forecast {
+					margin: 0px 20px 0px 0px;
+				}
+			}
+			&_day-of-week {
+				font-size: 12px;
+				margin: 5px 0px 0px 0px;
+			}
+		}
+	}
+	.left-aside {
+		& .spacer {
+			display: none;
+		}
+	}
+	.right-aside {
+		&__location {
+			padding: 40px 0px 0px 0px;
+			& .coordinates {
+				font-size: 12px;
+			}
+		}
+	}
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 800px) {
+	.wrapper {
+		margin: 0 40px;
+	}
+	.header {
+		& > * {
+			font-size: 12px;
+			height: 30px;
+		}
+		& .units__option {
+			width: 30px;
+			line-height: 30px;
+		}
+		& .locale-select {
+			font-size: 12px;
+			width: 70px;
+			padding: 0px 0px 0px 15px;
+		}
+		& .refresh-button {
+			font-size: 12px;
+			&__wrapper {
+				width: 30px;
+			}
+		}
+		& .search__submit {
+			font-size: 12px;
+		}
+	}
+	.time {
+		&__hours,
+		&__minutes,
+		&__seconds {
+			width: 24px;
+		}
+	}
+	.weather {
+		&__now {
+			& .weather {
+				&__icon {
+					top: -10px;
+				}
+			}
+		}
+	}
+}
+
+/* Landscape phones and smaller */
+@media (max-width: 700px) {
+	.location {
+		&__map {
+			width: 200px;
+			height: 200px;
+			clip-path: path(
+				"M20 200, Q0 200 0 180, L0 20, Q0 0 20 0, L180 0, Q200 0 200 20, L200 180, Q200 200 180 200 Z"
+			);
+			margin: 0px 0px 10px 0px;
+		}
+	}
+	.weather {
+		&__now {
+			margin: 0px 0px 20px 0px;
+		}
+	}
+	.left-aside {
+		&__date-time {
+			margin: 0px 0px 15px 0px;
+		}
+	}
+}
+
+/* Landscape phones and smaller */
+@media (max-width: 650px) {
+	.header {
+		& .search__city {
+			width: 150px;
+		}
+	}
+}
+
+/* Landscape phones and smaller */
+@media (max-width: 590px) {
+	.location {
+		margin: 0px 0px 10px 0px;
+		&__place {
+			font-size: 20px;
+		}
+	}
+	.date,
+	.time {
+		font-size: 12px;
+	}
+	.weather {
+		&__temperature {
+			margin: 0px 15px 0px 0px;
+			font-size: 50px;
+			&::after {
+				top: -8px;
+				font-size: 40px;
+			}
+		}
+		&__now {
+			& .weather {
+				&__container {
+					height: 120px;
+				}
+				&__parameters-container {
+					font-size: 10px;
+					& > * {
+						line-height: 16px;
+					}
+				}
+				&__wind-direction {
+					top: 1px;
+					font-size: 18px;
+				}
+				&__icon {
+					font-size: 50px;
+				}
+			}
+		}
+		&__forecast {
+			flex-wrap: wrap;
+			& .weather {
+				&__icon {
+					font-size: 24px;
+					top: -5px;
+				}
+				&__temperature {
+					font-size: 24px;
+					&::after {
+						top: -1px;
+						font-size: 24px;
+					}
+				}
+				&__all-day-forecast {
+					margin: 0px 20px 20px 0px;
+				}
+			}
+			&_day-of-week {
+				font-size: 10px;
+				margin: 5px 0px 0px 0px;
+			}
+		}
+	}
+	.left-aside {
+		& .spacer {
+			display: none;
+		}
+	}
+	.right-aside {
+		&__location {
+			padding: 40px 0px 0px 0px;
+			& .coordinates {
+				font-size: 12px;
+			}
+		}
+	}
+}
+
+/* Landscape phones and smaller */
+@media (max-width: 520px) {
+	.wrapper {
+		margin: 0 20px;
+	}
+	.header {
+		& > * {
+			margin: 0px 5px 0px 0px;
+		}
+	}
+	.left-aside {
+		&__date-time {
+			flex-direction: column;
+			& > * {
+				display: inline-flex;
+			}
+		}
+	}
+	.weather {
+		&__now {
+			& .weather {
+				&__container {
+					display: block;
+					height: auto;
+				}
+				&__temperature {
+					height: auto;
+					margin: 0px 0px 15px 0px;
+				}
+				&__icon {
+					font-size: 40px;
+					top: 0px;
+				}
+				&__details-container {
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+/* Landscape phones and smaller */
+@media (max-width: 480px) {
+	.header {
+		& .search__city {
+			width: 120px;
+		}
+		& .search__submit {
+			width: auto;
+			padding: 0 10px;
+		}
+	}
+}
+
+/* Album phones and smaller */
+@media (max-width: 400px) {
+	.header {
+		display: flex;
+		flex-wrap: wrap;
+		& > * {
+			margin-bottom: 10px;
+		}
+	}
+}
+
+/* Album phones and smaller */
+@media (max-width: 380px) {
+	.location {
+		&__map {
+			width: 150px;
+			height: 150px;
+			clip-path: path(
+				"M20 150, Q0 150 0 130, L0 20, Q0 0 20 0, L130 0, Q150 0 150 20, L150 130, Q150 150 130 150 Z"
+			);
+			margin: 0px 0px 10px 0px;
+		}
+	}
+}

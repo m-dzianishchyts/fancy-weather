@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.css' rel='stylesheet' />
+	<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.js'></script>
+	<title>Fancy Weather</title>
+</head>
+
+<body>
+	<div class="page">
+		<div class="background">
+			<div class="background__filter"></div>
+		</div>
+		<div class="wrapper">
+			<header class="header">
+				<div class="refresh-button__wrapper">
+					<button class="header__refresh refresh-button button">
+						<i class="icon-refresh"></i>
+					</button>
+				</div>
+				<div class="header__locale">
+					<select name="locale" class="locale-select button">
+						<option value="en">en</option>
+						<option value="ru">ru</option>
+					</select>
+				</div>
+				<div class="header__units">
+					<div class="units__options">
+						<div class="units__option button">f</div>
+						<div class="units__option button">c</div>
+					</div>
+				</div>
+				<div class="spacer"></div>
+				<div class="header__search">
+					<form class="search__form">
+						<input name="city" type="text" class="search__city">
+						<input type="submit" class="search__submit button">
+					</form>
+				</div>
+			</header>
+			<main class="main">
+				<div class="main__left-aside left-aside">
+					<div class="left-aside__location location">
+						<p class="location__place"></p>
+					</div>
+					<div class="left-aside__date-time">
+						<div class="left-aside__date date">
+							<p class="date__content">
+								<span class="date__day-of-week"></span>
+								<span class="date__separator comma"></span>
+								<span class="date__month"></span>
+								<span class="date__separator whitespace"></span>
+								<span class="date__day-of-month"></span>
+							</p>
+						</div>
+						<div class="left-aside__time time">
+							<p class="time__content">
+								<span class="time__hours"></span>
+								<span class="time__separator colon"></span>
+								<span class="time__minutes"></span>
+								<span class="time__separator colon"></span>
+								<span class="time__seconds"></span>
+							</p>
+						</div>
+					</div>
+					<div class="spacer"></div>
+					<section class="left-aside__weather weather">
+						<section class="weather__now">
+							<div class="weather__container">
+								<p class="weather__temperature"></p>
+								<div class="weather__details-container">
+									<div class="weather__icon-container">
+										<i class="weather__icon"></i>
+									</div>
+									<div class="weather__parameters-container">
+										<p class="weather__description"></p>
+										<p class="weather__feels-like-temperature_wrapper">
+											<span class="label"></span>
+											<span class="weather__feels-like-temperature"></span>
+										</p>
+										<p class="weather__wind_wrapper">
+											<span class="label"></span>
+											<span class="weather__wind-speed"></span>
+											<span class="weather__wind-speed_unit"></span>
+											<span class="weather__wind-direction fixed-width"></span>
+										</p>
+										<p class="weather__humidity_wrapper">
+											<span class="label"></span>
+											<span class="weather__humidity"></span>
+										</p>
+									</div>
+								</div>
+							</div>
+						</section>
+						<section class="weather__forecast">
+							<div class="weather__all-day-forecast">
+								<div class="weather__container">
+									<p class="weather__temperature"></p>
+									<div class="weather__details-container">
+										<div class="weather__icon-container">
+											<i class="weather__icon"></i>
+										</div>
+									</div>
+								</div>
+								<p class="weather__forecast_day-of-week"></p>
+							</div>
+							<div class="weather__all-day-forecast">
+								<div class="weather__container">
+									<p class="weather__temperature"></p>
+									<div class="weather__details-container">
+										<div class="weather__icon-container">
+											<i class="weather__icon"></i>
+										</div>
+									</div>
+								</div>
+								<p class="weather__forecast_day-of-week"></p>
+							</div>
+							<div class="weather__all-day-forecast">
+								<div class="weather__container">
+									<p class="weather__temperature"></p>
+									<div class="weather__details-container">
+										<div class="weather__icon-container">
+											<i class="weather__icon"></i>
+										</div>
+									</div>
+								</div>
+								<p class="weather__forecast_day-of-week"></p>
+							</div>
+						</section>
+					</section>
+				</div>
+				<div class="main__right-aside right-aside">
+					<div class="right-aside__location location">
+						<div id="map" class="location__map"></div>
+						<div class="location__coordinates coordinates">
+							<p class="coordinates__latitude_wrapper">
+								<span class="label"></span>
+								<span class="coordinates__latitude"></span>
+							</p>
+							<p class="coordinates__longitude_wrapper">
+								<span class="label"></span>
+								<span class="coordinates__longitude"></span>
+							</p>
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+	</div>
+	<script src="js/script.min.js" type="module"></script>
+</body>
+
+</html>
